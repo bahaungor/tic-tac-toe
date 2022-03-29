@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.ico?" type="image/x-icon">
+    <script src="./script.js" defer></script>
+</head>
+<body>
+    <div class="main-wrapper">
+        <header class="header">Tic-Tac-Toe</header>
+        <main class="container">
+            <div class="settings">
+                <div class="first-row">
+                    <div class="hardness-selection">
+                        <select name="hardness" id="hardness">
+                            <option value="easy">Easy</option>
+                            <option value="medium">Medium</option>
+                            <option value="hard">Hard</option>
+                        </select>
+                    </div>
+                    <div class="board-size-selection">
+                        <select name="board-size" id="board-size">
+                            <option value="3">3x3</option>
+                            <option value="5">5x5</option>
+                            <option value="10">10x10</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="second-row">
+                    <div class="symbol-selection">
+                        <div class="button symbol-x active-button" data-symbol="X">X</div>
+                        <div class="button symbol-o" data-symbol="O">O</div>
+                    </div>
+                </div>
+            </div>
+            <div class="board-grid-container">
+                <div class="game-board">
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                    <div class="game-square"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="footer">
+            Copyright © 
+            <script>
+                document.write((new Date()).getFullYear())
+            </script> 
+            Bahadir Ungor
+        </footer>
+    </div>
+</body>
+</html>
