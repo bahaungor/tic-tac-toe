@@ -50,45 +50,6 @@ body{
     margin-left: auto;
     margin-right: auto;
     padding: 25px 15px;
-    height: 120px;
-}
-
-.settings .first-row{
-    display: flex;
-    justify-content: space-around;
-    padding-bottom: 20px;
-}
-
-.hardness-selection select,
-.board-size-selection select{
-    border: none;
-    width: 100px;
-    background: none;
-    border-bottom: 3px solid black;
-    outline: none;
-}
-
-.settings .symbol-selection{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    justify-content: center;
-}
-
-.symbol-x,
-.symbol-o{
-    border: 1px solid var(--gray);
-    background-color: var(--white);
-    padding: 5px 60px;
-    border-radius: 10px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: var(--shadow);
-}
-
-.active-button{
-    border: 2px solid var(--gray);
-    box-shadow: var(--shadowbig);
 }
 
 .container .board-grid-container{
