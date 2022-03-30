@@ -61,21 +61,21 @@ const checkWinner = (function(){
     function winner(array){
         if(array[0] + array[1] + array[2] == "XXX"
         || array[3] + array[4] + array[5] == "XXX"
-        || array[6] == array[7] && array[8] == "XXX"
-        || array[0] == array[3] && array[6] == "XXX"
-        || array[1] == array[4] && array[7] == "XXX"
-        || array[2] == array[5] && array[8] == "XXX"
-        || array[0] == array[4] && array[8] == "XXX"
-        || array[2] == array[4] && array[6] == "XXX"){
+        || array[6] + array[7] + array[8] == "XXX"
+        || array[0] + array[3] + array[6] == "XXX"
+        || array[1] + array[4] + array[7] == "XXX"
+        || array[2] + array[5] + array[8] == "XXX"
+        || array[0] + array[4] + array[8] == "XXX"
+        || array[2] + array[4] + array[6] == "XXX"){
             alert("Wineeeeeer is player X" )
         } else if (array[0] + array[1] + array[2] == "OOO"
         || array[3] + array[4] + array[5] == "OOO"
-        || array[6] == array[7] && array[8] == "OOO"
-        || array[0] == array[3] && array[6] == "OOO"
-        || array[1] == array[4] && array[7] == "OOO"
-        || array[2] == array[5] && array[8] == "OOO"
-        || array[0] == array[4] && array[8] == "OOO"
-        || array[2] == array[4] && array[6] == "OOO"){
+        || array[6] + array[7] + array[8] == "OOO"
+        || array[0] + array[3] + array[6] == "OOO"
+        || array[1] + array[4] + array[7] == "OOO"
+        || array[2] + array[5] + array[8] == "OOO"
+        || array[0] + array[4] + array[8] == "OOO"
+        || array[2] + array[4] + array[6] == "OOO"){
             alert("Wineeeeeer is player O" )
         }
     }
