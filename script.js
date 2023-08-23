@@ -16,6 +16,7 @@ const playRound = (function (){
     const status = document.querySelector(".status")
     return function(){
         this.textContent = turn
+        this.removeEventListener("click", playRound)
         turn == "X" ? turn = "O": turn = "X";
         status.textContent = `Player ${turn}'s Turn:`
         checkWinner()
@@ -23,8 +24,8 @@ const playRound = (function (){
 })();
 
 const refresh = (function (){
-    const gameBoard = document.querySelector(".gameBoard")
     return function(){
+        const gameBoard = document.querySelector(".gameBoard")
         turn = "X"
         document.querySelector(".status").textContent = `Player ${turn}'s Turn:`
         gameBoard.innerHTML = "";
@@ -39,12 +40,13 @@ const refresh = (function (){
 
 refresh()
 
-document.querySelector(".restart").onclick = () => location.reload();
+document.querySelector(".restart").onclick = () => refresh();
 
 const checkWinner = (function(){
-    const gameBoard = Array.from(document.querySelectorAll(".square"))
     return function(){
+        const gameBoard = Array.from(document.querySelectorAll(".square"))
         let deneme = gameBoard.map(square => square.textContent)
+        console.log(deneme)
         if (deneme[0] + deneme[1] + deneme[2] == "XXX" ||
             deneme[3] + deneme[4] + deneme[5] == "XXX" ||
             deneme[6] + deneme[7] + deneme[8] == "XXX" ||
@@ -68,9 +70,9 @@ const checkWinner = (function(){
 })();
 
 const declareWinner = (function(){
-    const gameBoard = document.querySelectorAll(".square")
-    const status = document.querySelector(".status")
     return function(symbol){
+        const gameBoard = document.querySelectorAll(".square")
+        const status = document.querySelector(".status")
         gameBoard.forEach(square => square.removeEventListener("click", playRound))
         status.textContent = "GAME OVER. WINNER IS PLAYER: " + symbol
     }
