@@ -2,40 +2,32 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./favicon.ico?" type="image/x-icon">
-    <script src="./script.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico?" type="image/x-icon">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    <div class="main-wrapper">
-        <header class="header">Tic-Tac-Toe</header>
-        <main class="container">
-            <div class="settings">
-            </div>
-            <div class="board-grid-container">
-                <div class="game-board">
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                    <div class="game-square"></div>
-                </div>
-            </div>
-        </main>
-        <footer class="footer">
-            Copyright © 
-            <script>
-                document.write((new Date()).getFullYear())
-            </script> 
-            Bahadir Ungor
-        </footer>
-    </div>
+    <header>
+        <div class="header">Tic Tac Toe</div>
+        <span class="tt">🌙</span>
+    </header>
+    <main>
+        <div class="status">Player X's Turn:</div>
+        <div class="gameBoard">
+            <div class="square">X</div>
+            <div class="square">X</div>
+            <div class="square">X</div>
+            <div class="square">O</div>
+            <div class="square">O</div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+            <div class="square"></div>
+        </div>
+        <div class="restart">Restart Game</div>
+    </main>
+    <footer>Copyright © Bahadir UNGOR</footer>
 </body>
 </html>
