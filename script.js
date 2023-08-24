@@ -19,15 +19,13 @@ const playRound = (function (){
         this.removeEventListener("click", playRound)
         turn == "X" ? turn = "O": turn = "X";
         status.textContent = `Player ${turn}'s Turn:`
-        checkWinner()
+        checkWinner.check()
     }
 })();
 
 const refresh = (function (){
-    return function(){
+    function content(){
         const gameBoard = document.querySelector(".gameBoard")
-        turn = "X"
-        document.querySelector(".status").textContent = `Player ${turn}'s Turn:`
         gameBoard.innerHTML = "";
         for (let i = 0; i < 9; i++) {
             const sqaure = document.createElement('div')
@@ -36,17 +34,17 @@ const refresh = (function (){
             gameBoard.appendChild(sqaure)
         }
     }
+    return {content}
 })();
 
-refresh()
+refresh.content()
 
-document.querySelector(".restart").onclick = () => refresh();
+document.querySelector(".restart").onclick = () => refresh.content();
 
 const checkWinner = (function(){
-    return function(){
+    function check(){
         const gameBoard = Array.from(document.querySelectorAll(".square"))
         let deneme = gameBoard.map(square => square.textContent)
-        console.log(deneme)
         if (deneme[0] + deneme[1] + deneme[2] == "XXX" ||
             deneme[3] + deneme[4] + deneme[5] == "XXX" ||
             deneme[6] + deneme[7] + deneme[8] == "XXX" ||
@@ -67,6 +65,7 @@ const checkWinner = (function(){
                 declareWinner("O")
             }
     }
+    return {check}
 })();
 
 const declareWinner = (function(){
@@ -77,8 +76,3 @@ const declareWinner = (function(){
         status.textContent = "GAME OVER. WINNER IS PLAYER: " + symbol
     }
 })();
-
-
-
-
-
