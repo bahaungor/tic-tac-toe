@@ -1,4 +1,4 @@
-# OCR Model for Handwritten Text Recognition
+# Tic Tac Toe Game
 Simple Tic Tac Toe game you can play around
 
 Link to the website → [**Tic-Tac-Toe**](https://bahaungor.github.io/tic-tac-toe/)
